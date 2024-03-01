@@ -2,8 +2,9 @@ const navbar = document.getElementById('navbar');
    let scrolled = false;
 
    window.onscroll = function () {
-      if (window.pageYOffset > 500) {
-         navbar.classList.remove('top')
+      if (window.pageYOffset > 100) { // Adjusted to 100 for demonstration
+         navbar.classList.remove('top');
+         navbar.classList.add('scrolled'); // Add class when scrolled
          if (!scrolled) {
             navbar.style.transform = "translateY(-70px)";
          }
@@ -13,6 +14,7 @@ const navbar = document.getElementById('navbar');
          }, 250);
       } else {
          navbar.classList.add('top');
+         navbar.classList.remove('scrolled'); // Remove class when not scrolled
          scrolled = false;
       }
    }

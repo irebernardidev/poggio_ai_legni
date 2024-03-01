@@ -236,25 +236,33 @@ img {
 
 .rooms .room {
    display: flex;
-   flex-direction: row;
-   padding: 0 1.25rem;
-   font-weight: 500;
-}
+   flex-wrap: wrap; /* Ensure the container can wrap its children on smaller screens */
+   justify-content: center; /* Center the items horizontally */
+   gap: 20px; /* Provide some space between the items */
+   text-align: center;
+ }
 
 .rooms .room > div {
+   flex: 1; /* Distribute space equally among .room > div elements */
    display: flex;
    flex-direction: column;
    padding: 0 1.25rem;
-}
+   max-width: 33.333%; /* Optional: limit max width for larger screens */
+   text-align: center;
+ }
 
 .rooms .room img {
+   width: 100%; /* Make images use up all available horizontal space */
+   height: auto; /* Scale height according to the width to maintain aspect ratio */
    border-radius: 0.188rem;
-}
+   display: block; /* Ensure the image does not have extra space below it */
+ }
 
 .rooms .room h3 {
    padding-top: 1.25rem;
    font-weight: 500;
    font-size: 1.313rem;
+   text-align: center;
 }
 
 .rooms .room .list {
@@ -262,13 +270,14 @@ img {
 }
 
 .rooms .room .list ul {
-   list-style: disc;
+   list-style: disc inside;
    padding: 0 1.125rem;
    font-size: 1.063rem;
 }
 
 .rooms .room .list ul li {
    padding: 0.313rem 0;
+   text-align: center;
 }
 
 .rooms .room .btn {
@@ -540,6 +549,7 @@ img {
 
    .rooms .room > div {
       padding: 0;
+      max-width: 100%;
    }
 }
 
