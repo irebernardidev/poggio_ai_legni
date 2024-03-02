@@ -45,34 +45,28 @@ img {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background: rgba(255, 255, 255, 0.8); /* White background with opacity */
-   color: #000;
-   height: 7rem;
+   background: #007bff;
+   color: #fff;
+   height: 4.375rem;
    width: 100%;
    padding: 1.25rem 0.625rem;
    position: fixed;
    top: 0;
-   transition: 0.9s;
-   backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background elements */
+   transition: 0.9s; /* Smooth transition for background */
 }
 
 .navbar.top {
    background: transparent;
-   backdrop-filter: none; /* Remove the blur effect when the navbar is at the top */
 }
 
 .navbar a {
-   color: #000;
+   color: #fff;
    padding: 0.625rem 0.938rem;
-   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-   font-weight: bold; /* Makes text bolder */
 }
 
 .navbar .logo {
-   font-size: 1.7rem;
+   font-size: 1.5rem;
    padding: 0.938rem;
-   position: absolute;
-   left: 50%;
    order: 2;
    transform: translateX(-50%);
 }
@@ -102,16 +96,15 @@ img {
 }
 
 .navbar .social a {
-   opacity: 0.7;
+   opacity: 0.5;
    padding: 0 1.25rem;
    transition: all 0.4s ease-in-out;
 }
 
 .navbar .social a:hover {
-   color:#fff;
    opacity: 1;
 }
-
+  
 /* Hero */
 .hero {
    background: url('../img/home/home.jpg') no-repeat center center/cover;
@@ -516,7 +509,6 @@ img {
       display: none;
       order: 2;
    }
-   
    .hero .content h1 {
       font-size: 4.688rem;
    }
@@ -568,6 +560,7 @@ img {
       padding: 0.938rem 0.813rem;
    }
 }
+
 
 /* ? @500px */
 @media(max-width: 31.25rem) {
