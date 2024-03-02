@@ -15,7 +15,7 @@
       crossorigin="anonymous" />
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/utilities.css">
-   <title>Zeitaku | About Us</title>
+   <title>Poggio ai Legni| Chi Siamo</title>
    
    <!-- Favicon --> 
    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
@@ -31,19 +31,20 @@
    <header class="hero about-post">
       <div id="navbar" class="navbar top">
          <h1 class="logo">
-            <a href="#home">
-               <img src="img/logo.png" alt="Poggio ai Legni Logo" style="height: 80px;">
+            <a href="index.html">
+               <img src="img/logo.png" alt="Poggio ai Legni Logo" class="logo-black" style="height: 80px;">
+               <img src="img/logo3.png" alt="Poggio ai Legni Logo" class="logo-yellow" style="height: 80px; display:none;">
             </a>
          </h1>
          <nav>
             <ul>
-               <li><a href="#home">Home</a></li>
-               <li><a href="#about">Chi Siamo</a></li>
+               <li><a href="index.html#home">Home</a></li>
+               <li><a href="index.html#about">Chi Siamo</a></li>
                <!-- to be added later
                <li><a href="#products">Prodotti</a></li>
                -->
-               <li><a href="#rooms">Cosa Offriamo</a></li>
-               <li><a href="#contact">Contatti</a></li>
+               <li><a href="index.html#rooms">Cosa Offriamo</a></li>
+               <li><a href="index.html#contact">Contatti</a></li>
             </ul>
          </nav>
 
@@ -58,7 +59,7 @@
       </div>
 
       <div class="content">
-         <h1>About Us</h1>
+         <h1>Chi Siamo</h1>
       </div>
    </header>
 
@@ -87,7 +88,7 @@
       </section>
    </div>
 
-   <!-- Rooms -->
+   <!-- Rooms 
    <section id="rooms" class="rooms about-rooms">
       <header class="secondary-header">
          <h4 class="text-secondary">Book your accomodations now!</h4>
@@ -136,7 +137,7 @@
          </div>
       </div>
    </section>
-
+-->
    <div class="main-container">
       <section class="post">
          <div class="post-two">
@@ -166,6 +167,7 @@
       <i class="fas fa-phone-alt"></i>
       <p> +234 90000000</p>
    </div>
+   <script src="js/script.js"></script>
 </body>
 
 <footer id="footer" class="footer bg-dark">
@@ -176,29 +178,12 @@
             class="fab fa-youtube"></i></a>
       <a href="https://www.linkedin.com/in/victor-eke-2722711a4/"><i class="fab fa-linkedin"></i></a>
    </div>
-   <p>Copyright &copy; 2020 &nbsp; | &nbsp; <a href="thankyou.html"><i class="fas fa-spa text-primary"></i></a> Zeitaku
-   </p>
+   <p>
+      Copyright &copy; 2024 &nbsp; | &nbsp; 
+      <a href="thankyou.html">
+          <img src="img/logo2.png" alt="Logo" class="logo-icon">Poggio ai Legni
+      </a>
+  </p>
 </footer>
 
 </html>
-
-<script>
-   const navbar = document.getElementById('navbar');
-   let scrolled = false;
-
-   window.onscroll = function () {
-      if (window.pageYOffset > 200) {
-         navbar.classList.remove('top')
-         if (!scrolled) {
-            navbar.style.transform = "translateY(-70px)";
-         }
-         setTimeout(function () {
-            navbar.style.transform = "translateY(0)";
-            scrolled = true;
-         }, 250);
-      } else {
-         navbar.classList.add('top');
-         scrolled = false;
-      }
-   }
-</script>

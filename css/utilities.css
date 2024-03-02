@@ -1,19 +1,19 @@
 /* text color */
 .text-primary {
-    color: #3cce96;
+    color: #DAA520;
  }
  
  .text-secondary {
-    color: #14a36c;
+    color: #bc8804;
  }
  
  .text-other {
-    color: #0284d0;
+    color: #333;
  }
  
  /* background */
  .bg-primary {
-    background: #3cce96;
+    background: #DAA520;
     color: #fff;
  }
  
@@ -23,8 +23,7 @@
  }
  
  .bg-dark {
-    background: linear-gradient(to right, #333, #e0e0e0);
-    color: #333;
+    background: linear-gradient(135deg, #9DB17C 0%, #C2B280 50%, #DAA520 100%);
  }
  
  /* button */
@@ -40,17 +39,17 @@
  }
  
  .btn-primary {
-    background: #3cce96;
+    background: #DAA520 ;
     color: #fff;
  }
  
  .btn-primary:hover {
-    background: #14a36c;
+    background: #bc8804;
  }
  
  .btn-outline {
     background: transparent;
-    border: 1px solid #3cce96; 
+    border: 1px solid #DAA520; 
     color: #333; 
  }
  

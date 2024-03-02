@@ -44,15 +44,16 @@ img {
 .navbar {
    display: flex;
    align-items: center;
-   justify-content: space-between;
-   background: #007bff;
+   background: linear-gradient(135deg, #9DB17C 0%, #C2B280 50%, #DAA520 100%);
    color: #fff;
-   height: 4.375rem;
+   height: 5.2rem;
    width: 100%;
    padding: 1.25rem 0.625rem;
    position: fixed;
    top: 0;
-   transition: 0.9s; /* Smooth transition for background */
+   transition: 0.9s;
+   justify-content: space-between;
+   text-align: center;
 }
 
 .navbar.top {
@@ -66,10 +67,32 @@ img {
 
 .navbar .logo {
    font-size: 1.5rem;
-   padding: 0.938rem;
+   padding: 1.25rem;
    order: 2;
    transform: translateX(-50%);
+   color: #000;
 }
+
+.logo {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.logo-black {
+   display: block;
+ }
+ 
+ .navbar.top .logo-black {
+   display: none; 
+ }
+ 
+ .logo-yellow {
+   display: none;
+ }
+ 
+ .navbar.top .logo-yellow {
+   display: block;
+ }
 
 .navbar nav {
    order: 1;
@@ -187,7 +210,7 @@ img {
 
 .icons i {
    font-size: 2.5rem;
-   color: #14af74;
+   color: #DAA520 ;
    padding-bottom: 1rem;
 }
 
@@ -280,7 +303,7 @@ img {
 }
 
 .rooms .room .btn:hover {
-   background: #3cce96;
+   background: #DAA520;
    color: #fff;
 }
 
@@ -306,7 +329,7 @@ img {
 
 .contact input:focus {
    outline: none;
-   border: 0.063rem solid #59d8a7;
+   border: 0.063rem solid #DAA520;
    font-size: 0.825rem;
 }
 
@@ -326,7 +349,7 @@ img {
 /* About-info */
 .hero.about-post {
    background: url(../img/home/about-post.jpg) no-repeat center center/cover;
-   height: 50vh;
+   height: 70vh;
 }
 
 .hero.about-post .content {
@@ -356,7 +379,7 @@ img {
 
 .post-one {
    padding: 1.875rem 0 1.875rem;
-   border-bottom: 0.063rem solid #3cce96;
+   border-bottom: 0.063rem solid #DAA520;
 }
 
 .rooms.about-rooms .btn:hover {
@@ -366,7 +389,7 @@ img {
 .post-two {
    padding: 0 0 1.25rem;
    margin: 0 0 1.875rem;
-   border-bottom: 0.063rem solid #14af74;
+   border-bottom: 0.063rem solid #DAA520;
 }
 
 .post-two:last-child {
@@ -393,7 +416,7 @@ img {
 }
 
 .contact-info p:last-child {
-   background: #3cce96;
+   background: #DAA520;
    color: #fff;
    padding: 0.938rem;
    border: 0.063rem solid #ddd;

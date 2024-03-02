@@ -1,47 +1,30 @@
-const navbar = document.getElementById('navbar');
-let scrolled = false;
-
 window.onscroll = function() {
-  if (window.scrollY > 500) {
-    navbar.classList.remove('top')
-    if (!scrolled) {
-      navbar.style.transform = "translateY(-70px)";
-    }
-    setTimeout(function() {
-      navbar.style.transform = "translateY(0)"; 
-      scrolled = true;
-    }, 250);
+
+  const navbar = document.querySelector('.navbar');
+  
+  // Navbar color change 
+  if(document.documentElement.scrollTop > 500) {
+    navbar.classList.remove('top');
+    // Rest of navbar color change code
   } else {
     navbar.classList.add('top');
-    scrolled = false; 
   }
-}
 
-// Smooth Scrolling
-$('#navbar a').on('click', function (e) {
-  if (this.hash !== '') { 
-    e.preventDefault();
-    const hash = this.hash;
+  // Logo toggle
+  if(navbar.classList.contains('top')) {
+    navbar.querySelector('.logo-yellow').style.display = 'block';
+    navbar.querySelector('.logo-black').style.display = 'none';
 
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top - 50
-    }, 900);
-  }  
-});
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("scrollTop").style.display = "block";
   } else {
+    navbar.querySelector('.logo-black').style.display = 'block';
+    navbar.querySelector('.logo-yellow').style.display = 'none';
+  }
+
+  // Scroll to top button visibility
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollTop").style.display = "block";
+  } else {  
     document.getElementById("scrollTop").style.display = "none";
   }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-document.getElementById("scrollTop").addEventListener("click", function(event){
-  event.preventDefault();
-  window.scrollTo({top: 0, behavior: 'smooth'});
-});
+};
